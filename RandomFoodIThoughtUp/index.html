@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random_Food_I_Thought_Up</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap">
+    <link rel="stylesheet" href="styles.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <h1 class="title">Random Food I Thought Up</h1>
+    <div class="paper">
+        <form>
+        <div class="rt">
+        <h2>What is the name of this "delicious cuisine"?</h2>
+        <textarea id="dishName" placeholder="Ex. Apple Brown Betty"></textarea>
+        </div>
+        <div class="pit">
+        <h2>Picture of the Dish(optional)</h2>
+        <input type="file" id="imageInput" accept=".jpg, .jpeg, .png, .gif, .bmp, .webp, .svg" onchange="previewImage(event)"/>
+        <img id="imagePreview" class="preview" alt="Preview of the dish" hidden>
+        </div>
+        <div class="dt">
+        <h2>Recipe Description</h2>
+        <textarea id="description" rows="4" cols="50" placeholder="Recipe description"></textarea>
+        </div>
+        <div class="it">
+        <h2>Ingredients</h2>
+        <article>
+        <ul id="ingredientsList">
+            <li><textarea class="ingredientsText" placeholder="Ingredients"></textarea></li>
+        </ul>
+         <button type="button" id="addIngredientButton" class="add">+</button>
+        <button type="button" id="removeIngredientButton" class="remove">-</button>
+        </article>
+        </div>
+        <div class="pt">
+        <h2>Preparation</h2>
+        <article>
+        <ol id="preparationList">
+            <li><textarea class="preparationText" placeholder="What's first?"></textarea></li>
+        </ol>
+        <button type="button" id="addPreparationButton" class="add">+</button>
+        <button type="button" id="removePreparationButton" class="remove">-</button>
+        </article>
+        </div>
+        <div class="buttons">
+        <input type="submit" id="submitButton" value="Submit" class="subbutton"/>
+        <button type="button" id="clearButton" class="clbutton">Clear</button>
+        </div>
+        <p id="errorMessage" class="errorMessage"></p>
+        </form>
+    </div>
+    <div class="paper saved">
+        <h2>Saved Recipes</h2>
+        <button onclick="window.print()">Print</button>
+        <div id="savedRecipes"></div>
+    </div>
+<footer>
+    <p>&copy; 2026 Random Food I Thought Up. All rights reserved.</p>
+</footer>
+</body>
+
+</html>

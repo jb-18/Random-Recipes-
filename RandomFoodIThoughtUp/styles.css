@@ -1,0 +1,113 @@
+body {
+  background-color: #E5DCC5;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.title {
+  font-family: 'Dancing Script', 'Brush Script MT', 'Lucida Handwriting', cursive;
+  font-size: 40px;
+  color: #a71a1a;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.paper {
+  background-color: #ffffff;
+  text-align: left;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2{
+    font-family: 'Arial', sans-serif;
+    font-size: 24px;
+    color: #000000;
+    text-align: left;
+    margin-top: 10px;
+}
+
+.preview{
+  display: block;
+  max-width: 100%;
+  max-height: 300px;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
+textarea{
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.add{
+  padding: 5px 10px;
+  font-size: 16px;
+  min-width: 44px;
+  min-height: 44px;
+}
+
+.remove{
+  padding: 5px 10px;
+  font-size: 16px;
+  min-width: 44px;
+  min-height: 44px;
+}
+
+.subbutton{
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #a71a1a;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@media (hover: hover) {
+  .add:hover, .remove:hover, .subbutton:hover {
+    background-color: #7e1111;
+    color: #ffffff;
+  }
+}
+
+.clbutton{
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #a71a1a;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.errorMessage{
+  color: #a71a1a;
+  font-family: 'Arial', sans-serif;
+}
+
+.saved{
+  margin-top: 20px;
+}
+
+  .recipeCard{
+  border-top: 1px solid #E5DCC5;
+  padding: 10px 0;
+  font-family: 'Arial', sans-serif;
+}
+
+
+@media print {
+  .title,
+  .paper:not(.saved) {
+    display: none !important;
+  }
+  body { background: white; color: black; font-size: 12pt; }
+   button, footer { display: none !important; }
+  .paper { box-shadow: none; padding: 0; }
+.recipeCard { break-inside: avoid; }
+  body.print-one .recipeCard:not(.printing) { display: none !important; }
+}
